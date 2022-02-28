@@ -1,433 +1,416 @@
 {
-  "mode": "All",
-  "policyRule": {
-  {
-  "if": {
-    "anyOf": [
-      {
-        "not": {
-          "anyOf": [
-            {
-              "field": "type",
-              "like": "Microsoft.Sql/servers/securityAlertPolicies"
-            },
+	"if": {
+		"anyOf": [{
+				"not": {
+					"anyOf": [{
+							"field": "type",
+							"like": "Microsoft.Sql/servers/securityAlertPolicies"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.ContainerService/managedClusters/*"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Sql/servers/connectionPolicies"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Compute/virtualMachines"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Compute/sshPublicKeys"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Compute/virtualMachineScaleSets"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Compute/disks/*"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Storage"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Network/networkInterfaces"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Network/networkSecurityGroups"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Network/publicIPAddresses"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Network/virtualNetworks"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.DocumentDB/databaseAccounts"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Web/serverFarms"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Web/sites"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Sql/servers/*"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.ManagedIdentity/userAssignedIdentities"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Network/loadBalancers"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Network/routeTables"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Sql/servers/databases"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.DataFactory/datafactories"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.DataLakeAnalytics/accounts"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.DataLakeStore"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Synapse/workspaces"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Databricks/workspaces"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.Logic/workflows"
+						},
+						{
+							"field": "type",
+							"like": "Microsoft.ContainerService/managedClusters/agentPools"
+						},
+						{
+							"field": "type",
+							"in": [
+								"Microsoft.Sql/servers/securityAlertPolicies",
+								"Microsoft.ContainerService/managedClusters",
+								"Microsoft.Sql/servers/connectionPolicies",
+								"Microsoft.Compute/virtualMachines",
+								"Microsoft.Compute/virtualMachineScaleSets",
+								"Microsoft.Compute/disks",
+								"Microsoft.Storage",
+								"Microsoft.Network/networkInterfaces",
+								"Microsoft.Network/networkSecurityGroups",
+								"Microsoft.Network/publicIPAddresses",
+								"Microsoft.Network/virtualNetworks",
+								"Microsoft.DocumentDB/databaseAccounts",
+								"Microsoft.Web/serverFarms",
+								"Microsoft.Web/sites",
+								"Microsoft.Sql/servers",
+								"Microsoft.ManagedIdentity/userAssignedIdentities",
+								"Microsoft.KeyVault/vaults",
+								"Microsoft.MachineLearningServices/workspaces",
+								"Microsoft.Compute/sshPublicKeys",
+								"Microsoft.Storage/storageAccounts",
+								"Microsoft.ContainerService/managedClusters/agentPools"
+							]
+						}
+					]
+				}
+			},
 			{
-              "field": "type",
-              "like": "Microsoft.ContainerService/managedClusters/*"
-            },
+				"field": "type",
+				"in": [
+					"Microsoft.Kubernetes/register/*"
+				]
+			},
 			{
-              "field": "type",
-              "like": "Microsoft.Sql/servers/connectionPolicies"
-            },
+				"field": "type",
+				"in": [
+					"Microsoft.KubernetesConfiguration/register/*"
+				]
+			},
 			{
-              "field": "type",
-              "like": "Microsoft.Compute/virtualMachines"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Compute/sshPublicKeys"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Compute/virtualMachineScaleSets"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Compute/disks/*"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Storage"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Network/networkInterfaces"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Network/networkSecurityGroups"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Network/publicIPAddresses"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Network/virtualNetworks"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.DocumentDB/databaseAccounts"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Web/serverFarms"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Web/sites"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Sql/servers/*"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.ManagedIdentity/userAssignedIdentities"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Network/loadBalancers"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Network/routeTables"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Sql/servers/databases"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.DataFactory/datafactories"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.DataLakeAnalytics/accounts"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.DataLakeStore"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Synapse/workspaces"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Databricks/workspaces"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.Logic/workflows"
-            },
-            {
-              "field": "type",
-              "like": "Microsoft.ContainerService/managedClusters/agentPools"
-            },
-            {
-              "field": "type",
-              "in": [
-			    "Microsoft.Sql/servers/securityAlertPolicies",
-		        "Microsoft.ContainerService/managedClusters",
-				"Microsoft.Sql/servers/connectionPolicies",
-                "Microsoft.Compute/virtualMachines",
-                "Microsoft.Compute/virtualMachineScaleSets",
-                "Microsoft.Compute/disks",
-                "Microsoft.Storage",
-                "Microsoft.Network/networkInterfaces",
-                "Microsoft.Network/networkSecurityGroups",
-                "Microsoft.Network/publicIPAddresses",
-                "Microsoft.Network/virtualNetworks",
-                "Microsoft.DocumentDB/databaseAccounts",
-                "Microsoft.Web/serverFarms",
-                "Microsoft.Web/sites",
-                "Microsoft.Sql/servers",
-                "Microsoft.ManagedIdentity/userAssignedIdentities",
-                "Microsoft.KeyVault/vaults",
-                "Microsoft.MachineLearningServices/workspaces",
-                "Microsoft.Compute/sshPublicKeys",
-                "Microsoft.Storage/storageAccounts",
-				"Microsoft.ContainerService/managedClusters/agentPools"
-              ]
-            }
-          ]
-        }
-      },
-	  {
-                "field": "type",
-                "in": [
-                  "Microsoft.Kubernetes/register/*"
-                ]
-              },
-              {
-                "field": "type",
-                "in": [
-                  "Microsoft.KubernetesConfiguration/register/*"
-                ]
-              },
-      {
-        "allof": [
-          {
-            "field": "type",
-            "equals": "Microsoft.Compute/disks"
-          },
-          {
-            "not": {
-              "allOf": [
-                {
-                  "field": "Microsoft.Compute/disks/diskSizeGB",
-                  "in": [
-                    "32",
-                    "64",
-                    "127",
-                    "128"
-                  ]
-                },
-                {
-                  "field": "Microsoft.Compute/disks/Sku.Tier",
-                  "in": [ "Standard" ]
-                }
-              ]
-            }
-          }
-        ]
-      },
-	  {
-        "allof": [
-          {
-                "field": "type",
-                "in": [
-                  "Microsoft.Kubernetes/register/*"
-                ]
-              },
-              {
-                "field": "type",
-                "in": [
-                  "Microsoft.KubernetesConfiguration/register/*"
-                ]
-              },
-          
-        ]
-      },
-      {
-        "allof": [
-          {
-            "field": "type",
-            "equals": "Microsoft.Sql/servers/databases"
-          },
-          {
-            "not": {
-              "allOf": [
-                {
-                  "field": "Microsoft.Sql/servers/databases/maxSizeBytes",
-                  "in": [
-                    "53687091200"
-                  ]
-                },
-                {
-                  "field": "Microsoft.Sql/servers/databases/requestedBackupStorageRedundancy",
-                  "in": [
-                    "Local"
-                  ]
-                }
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "allof": [
-          {
-            "field": "type",
-            "equals": "Microsoft.ContainerService/managedClusters"
-          },
-          {
-            "not": {
-              "allOf": [
-                {
-                  "field": "Microsoft.ContainerService/managedClusters/agentPoolProfiles[*].count",
-                  "in": [
-                    "2"
-                  ]
-                },
-                {
-                  "field": "Microsoft.ContainerService/managedClusters/agentPoolProfiles[*].vmSize",
-                  "in": [
-                    "Standard_D3_v2",
-                    "Standard_B4ms",
-                    "Standard_B2s"
-                  ]
-                }
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "allOf": [
-          {
-            "field": "type",
-            "equals": "Microsoft.Compute/virtualMachines"
-          },
-          {
-            "not": {
-              "field": "Microsoft.Compute/virtualMachines/sku.name",
-              "in": [
-                "Standard_D2s_v3",
-                "Standard_B2s",
-                "Standard_B1s",
-                "Standard_DS1_v2"
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "allOf": [
-          {
-            "field": "type",
-            "equals": "Microsoft.Compute/virtualMachineScaleSets"
-          },
-          {
-            "not": {
-              "field": "Microsoft.Compute/virtualMachineScaleSets/sku.name",
-              "in": [
-                "Standard_D2s_v3",
-                "Standard_B2s",
-                "Standard_B1s",
-                "Standard_DS1_v2",
-                "Standard_D3_v2",
-                "Standard_B4ms"
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "allOf": [
-          {
-            "source": "action",
-            "equals": "Microsoft.Storage/storageAccounts/write"
-          },
-          {
-            "field": "type",
-            "equals": "Microsoft.Storage/storageAccounts"
-          },
-          {
-            "not": {
-              "field": "Microsoft.Storage/storageAccounts/sku.name",
-              "in": [
-                "Standard_LRS",
-                "Standard_RAGRS"
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "allof": [
-          {
-            "field": "type",
-            "equals": "Microsoft.Web/serverfarms"
-          },
-          {
-            "not": {
-              "field": "Microsoft.Web/serverfarms/sku.name",
-              "in": [
-                "B1",
-                "WS1"
-              ]
-            }
-          },
-          {
-            "not": {
-              "field": "Microsoft.Web/serverfarms/sku",
-              "in": [
-                "WorkflowStandard"
-              ]
-            }
-          }
-        ]
-      },
-     
-      {
+				"allof": [{
+						"field": "type",
+						"equals": "Microsoft.Compute/disks"
+					},
+					{
+						"not": {
+							"allOf": [{
+									"field": "Microsoft.Compute/disks/diskSizeGB",
+									"in": [
+										"32",
+										"64",
+										"127",
+										"128"
+									]
+								},
+								{
+									"field": "Microsoft.Compute/disks/Sku.Tier",
+									"in": ["Standard"]
+								}
+							]
+						}
+					}
+				]
+			},
+			{
+				"allof": [{
+						"field": "type",
+						"in": [
+							"Microsoft.Kubernetes/register/*"
+						]
+					},
+					{
+						"field": "type",
+						"in": [
+							"Microsoft.KubernetesConfiguration/register/*"
+						]
+					}
 
-        "allOf": [
+				]
+			},
+			{
+				"allof": [{
+						"field": "type",
+						"equals": "Microsoft.Sql/servers/databases"
+					},
+					{
+						"not": {
+							"allOf": [{
+									"field": "Microsoft.Sql/servers/databases/maxSizeBytes",
+									"in": [
+										"53687091200"
+									]
+								},
+								{
+									"field": "Microsoft.Sql/servers/databases/requestedBackupStorageRedundancy",
+									"in": [
+										"Local"
+									]
+								}
+							]
+						}
+					}
+				]
+			},
+			{
+				"allof": [{
+						"field": "type",
+						"equals": "Microsoft.ContainerService/managedClusters"
+					},
+					{
+						"not": {
+							"allOf": [{
+									"field": "Microsoft.ContainerService/managedClusters/agentPoolProfiles[*].count",
+									"in": [
+										"2"
+									]
+								},
+								{
+									"field": "Microsoft.ContainerService/managedClusters/agentPoolProfiles[*].vmSize",
+									"in": [
+										"Standard_D3_v2",
+										"Standard_B4ms",
+										"Standard_B2s"
+									]
+								}
+							]
+						}
+					}
+				]
+			},
+			{
+				"allOf": [{
+						"field": "type",
+						"equals": "Microsoft.Compute/virtualMachines"
+					},
+					{
+						"not": {
+							"field": "Microsoft.Compute/virtualMachines/sku.name",
+							"in": [
+								"Standard_D2s_v3",
+								"Standard_B2s",
+								"Standard_B1s",
+								"Standard_DS1_v2"
+							]
+						}
+					}
+				]
+			},
+			{
+				"allOf": [{
+						"field": "type",
+						"equals": "Microsoft.Compute/virtualMachineScaleSets"
+					},
+					{
+						"not": {
+							"field": "Microsoft.Compute/virtualMachineScaleSets/sku.name",
+							"in": [
+								"Standard_D2s_v3",
+								"Standard_B2s",
+								"Standard_B1s",
+								"Standard_DS1_v2",
+								"Standard_D3_v2",
+								"Standard_B4ms"
+							]
+						}
+					}
+				]
+			},
+			{
+				"allOf": [{
+						"source": "action",
+						"equals": "Microsoft.Storage/storageAccounts/write"
+					},
+					{
+						"field": "type",
+						"equals": "Microsoft.Storage/storageAccounts"
+					},
+					{
+						"not": {
+							"field": "Microsoft.Storage/storageAccounts/sku.name",
+							"in": [
+								"Standard_LRS",
+								"Standard_RAGRS"
+							]
+						}
+					}
+				]
+			},
+			{
+				"allof": [{
+						"field": "type",
+						"equals": "Microsoft.Web/serverfarms"
+					},
+					{
+						"not": {
+							"field": "Microsoft.Web/serverfarms/sku.name",
+							"in": [
+								"B1",
+								"WS1"
+							]
+						}
+					},
+					{
+						"not": {
+							"field": "Microsoft.Web/serverfarms/sku",
+							"in": [
+								"WorkflowStandard"
+							]
+						}
+					}
+				]
+			},
 
-          {
+			{
 
-            "field": "type",
+				"allOf": [
 
-            "equals": "Microsoft.DocumentDb/databaseAccounts"
+					{
 
-          },
+						"field": "type",
 
-          {
+						"equals": "Microsoft.DocumentDb/databaseAccounts"
 
-            "field": "kind",
+					},
 
-            "equals": "GlobalDocumentDB"
+					{
 
-          },
+						"field": "kind",
 
-          {
+						"equals": "GlobalDocumentDB"
 
-            "anyOf": [
+					},
 
-              {
+					{
 
-                "count": {
+						"anyOf": [
 
-                  "field": "Microsoft.DocumentDB/databaseAccounts/capabilities[*]",
+							{
 
-                  "where": {
+								"count": {
 
-                    "field": "Microsoft.DocumentDB/databaseAccounts/capabilities[*].name",
+									"field": "Microsoft.DocumentDB/databaseAccounts/capabilities[*]",
 
-                    "equals": "EnableServerless"
+									"where": {
 
-                  }
+										"field": "Microsoft.DocumentDB/databaseAccounts/capabilities[*].name",
 
-                },
+										"equals": "EnableServerless"
 
-                "equals": 0
+									}
 
-              },
+								},
 
-              {
+								"equals": 0
 
-                "field": "Microsoft.DocumentDB/databaseAccounts/backupPolicy.type",
+							},
 
-                "notEquals": "Periodic"
+							{
 
-              },
+								"field": "Microsoft.DocumentDB/databaseAccounts/backupPolicy.type",
 
-              {
+								"notEquals": "Periodic"
 
-                "field": "Microsoft.DocumentDB/databaseAccounts/backupPolicy.Periodic.periodicModeProperties.backupStorageRedundancy",
+							},
 
-                "notEquals": "Local"
+							{
 
-              }
+								"field": "Microsoft.DocumentDB/databaseAccounts/backupPolicy.Periodic.periodicModeProperties.backupStorageRedundancy",
 
-            ]
+								"notEquals": "Local"
 
-          }
+							}
 
-        ]
+						]
 
-      },
-      {
-        "allOf": [
-          {
-            "field": "type",
-            "equals": "Microsoft.Databricks/workspaces"
-          },
-          {
-            "not": {
-              "field": "Microsoft.Databricks/workspaces/sku.name",
-              "in": [
-                "standard"
-              ]
-            }
-          }
-        ]
-      }
-    ]
-  },
-  "then": {
-    "effect": "deny"
-  }
+					}
+
+				]
+
+			},
+			{
+				"allOf": [{
+						"field": "type",
+						"equals": "Microsoft.Databricks/workspaces"
+					},
+					{
+						"not": {
+							"field": "Microsoft.Databricks/workspaces/sku.name",
+							"in": [
+								"standard"
+							]
+						}
+					}
+				]
+			}
+		]
+	},
+	"then": {
+		"effect": "deny"
+	}
+
 }
-  }
